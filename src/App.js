@@ -2,13 +2,17 @@
 import './App.css';
 
 import Header from './components/Header';
-import AddToDo from './components/AddToDo';
+import Form from './components/Form';
+import List from './components/List';
 
 function App() {
   return (
     <div className="App">
-    <Header/>
-    <AddToDo/>
+    <Header />
+    <Form />
+    <h2>Todos</h2>
+    <List name="Learn  react"/>
+    <List name="Be Awesome"/>
     </div>
   );
 }
