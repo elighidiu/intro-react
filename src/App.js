@@ -8,11 +8,10 @@ import List from './components/List';
 function App() {
   return (
     <div className="App">
-    <Header />
+    <Header className="Header"/>
     <Form />
     <h2>Todos</h2>
-    <List name="Learn  react"/>
-    <List name="Be Awesome"/>
+    <List />
     </div>
   );
 }
