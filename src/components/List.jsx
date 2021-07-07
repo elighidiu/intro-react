@@ -24,6 +24,7 @@ function List() {
   };
 
   return (
+    <div className="content">
     <div className="List">
       <ul>
         {todos.map((todo) =>
@@ -33,6 +34,7 @@ function List() {
         </li>))
         }
       </ul>
+    </div>
     </div>
   );
 }

@@ -3,6 +3,32 @@
   
 }
 
+ul {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+.content {
+    width: 750px;
+    margin:0 auto;
+    align-self: center;
+}
+
+.Header {
+  height:100px;
+  border-bottom: none;
+  margin-bottom: 10px;
+  background-color:aliceblue;
+  display: flex;
+}
+.Form {
+    margin-top: 30px;
+}
+
+hr {
+    border-bottom: 2px solid var(--nc-bg-3);
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -19,11 +45,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.Header{
-  width: 100% !important;
-  background-color:aliceblue;
 }
 
 .App-link {
