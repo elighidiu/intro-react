@@ -1,14 +1,4 @@
-import React, { useState } from 'react';
-
-let count = 0;  //to set up a dynamic id in the array we declared the count here and increment it in the array
-
-function List() {
-  const initialTodos = [
-    { id:count++, task: "Learn React", checked: false },
-    { id:count++, task: "Be awesome!", checked: false },
-    { id:count++, task: "No headaches", checked: false }
-  ];
-  const [todos, setTodos] = useState(initialTodos);
+function List({todos, setTodos}) {
 
   const handleClick = (todo) => {
     let newArr = todos; //create a new array which at this moment is the same as the array above
