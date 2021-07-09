@@ -14,6 +14,12 @@ function Form({todos, setTodos, count}) {
     console.log(todos);
   }
 
+  function deleteHandler() {
+    const completedList = todos.filter((item) => item.checked===false);
+ 
+    setTodos(completedList);
+  }
+
 
   return (
     <div className="content">
@@ -23,6 +29,7 @@ function Form({todos, setTodos, count}) {
           </div>
           <div className="SubmitButton">
             <button onClick={clickHandler} value="Submit" >Submit</button>
+            <button onClick={deleteHandler} value="Submit" >Delete Completed</button>
             <hr />
           </div>
       </div>

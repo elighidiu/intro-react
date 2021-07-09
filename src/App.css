@@ -26,6 +26,10 @@ ul {
     margin-top: 30px;
 }
 
+Button{
+  margin: 20px 10px 0px 0px;
+}
+
 hr {
     border-bottom: 2px solid var(--nc-bg-3);
 }

@@ -21,7 +21,7 @@ function App() {
 
     // Load saved  todos
     useEffect(() => {
-      const storedTodos= JSON.parse(localStorage.getItem(LSKEY));
+      const storedTodos= JSON.parse(localStorage.getItem(LSKEY + ".todos"));
       if (storedTodos) setTodos(storedTodos);
     }, []);
 
