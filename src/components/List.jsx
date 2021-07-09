@@ -2,13 +2,9 @@ function List({todos, setTodos}) {
 
   const handleClick = (todo) => {
     let newArr = todos; //create a new array which at this moment is the same as the array above
-
     const clicked = newArr.find(element => element.id === todo.id); //loop through the array and find the element clicked.
-
     clicked.checked = !clicked.checked; //change the checked state from false to true
-
     setTodos(newArr); //set initialTodos to be the new arr
-
     console.log(clicked);
 
   };

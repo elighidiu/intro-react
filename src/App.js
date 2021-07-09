@@ -19,16 +19,16 @@ function App() {
   ];
   const [todos, setTodos] = useState(initialTodos);
 
-    // Load saved  todos
-    useEffect(() => {
-      const storedTodos= JSON.parse(localStorage.getItem(LSKEY + ".todos"));
-      if (storedTodos) setTodos(storedTodos);
-    }, []);
+  // Load saved  todos
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem(LSKEY + ".todos"));
+    if (storedTodos) setTodos(storedTodos);
+  }, []);
 
   // Save todos to localStorage
   useEffect(() => {
     window.localStorage.setItem(LSKEY + ".todos", JSON.stringify(todos));
-   
+
   }, [todos]);
 
   return (
@@ -39,7 +39,7 @@ function App() {
         <h2>Todos</h2>
       </div>
       <List todos={todos} setTodos={setTodos} />
-     
+
 
     </div>
   );

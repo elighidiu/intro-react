@@ -8,7 +8,10 @@ function Form({todos, setTodos, count}) {
     const inputNewToDo = inputRef.current;
     console.log(inputNewToDo.value);  
     let newArr = JSON.parse(JSON.stringify(todos));
-    newArr.push({ id:count++, task: inputNewToDo.value, checked: false });
+
+    if (inputNewToDo.value){
+     newArr.push({ id:count++, task: inputNewToDo.value, checked: false });
+  }
     setTodos(newArr);
     console.log(newArr);
     console.log(todos);
@@ -16,10 +19,8 @@ function Form({todos, setTodos, count}) {
 
   function deleteHandler() {
     const completedList = todos.filter((item) => item.checked===false);
- 
     setTodos(completedList);
   }
-
 
   return (
     <div className="content">
